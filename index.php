@@ -1,3 +1,12 @@
+<?php 
+
+	//allow the config 
+	define('__CONFIG__', true);
+	// Require the 	config
+	require_once "inc/config.php"; 
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,31 +24,17 @@
 <body>
 
 	<div class="uk-section uk-container"> <!---ovo dvoje nam je potrebno kako bi unutra pisali sa uk gridom -->
-		<div class="uk-grid uh-child-width-1-3@s uk-child-width-1-1" uk-grid="">
-			<form class="uk-form-stacked js-login">
-				<div class="uk-margin">
-					<label class="uk-form-label" for="form-stacked-text">Email</label>
-					<div class="uk-form-controls">
-						<input class="uk-input" id="form-stacked-text" type="email" required="required" placeholder="email@email.com">
-					</div>
-				</div>
-				<div class="uk-margin">
-					<label class="uk-form-label" for="form-stacked-text">Password</label>
-					<div class="uk-form-controls">
-						<input class="uk-input" id="form-stacked-text" type="password" required="required" placeholder="Enter password">
-					</div>
-				</div>
-				<div class="uk-margin">
-					<button class="uk-button uk-button-default uk-button-small">Login</button>				
-				</div>
-			</form>
-		</div>
+		<?php 
+			echo "Hello world. Today is: ";
+			echo date("Y m d")
+		?>
+		<p>
+			<a href="/php_login_course/login.php">Login</a>
+			<a href="/php_login_course/register.php">Register</a>
+		</p>
 	</div>
 
+	<?php require_once "inc/footer.php" ?>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit-icons.min.js"></script>
 </body>
 </html>
